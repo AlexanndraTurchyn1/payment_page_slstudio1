@@ -1,20 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Payment Page</title>
+    <title>Оплатить курс</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>Оплатить курс</h2>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="sasha.turchin14@gmail.com">
-        <input type="hidden" name="item_name" value="Курс Ламинирования ресниц и бровей ">
-        <input type="hidden" name="amount" value="0.10">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="return" value="https://t.me/+jftYTAreCq5kZDk0">
+    <div class="container">
+        <h2>Оплатить курс</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="sasha.turchin14@gmail.com">
+            <input type="hidden" name="item_name" value="Курс ламинирования ресниц и бровей">
+            <input type="hidden" name="amount" value="1.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="return" value="https://t.me/+jftYTAreCq5kZDk0">
 
-        <input type="submit" value="Оплатить через PayPal">
-    </form>
+            <input type="submit" value="Оплатить через PayPal">
+        </form>
+    </div>
 </body>
 </html>
