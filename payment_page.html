@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Оплатить курс</h2>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="sasha.turchin14@gmail.com">
+        <input type="hidden" name="item_name" value="Курс Ламинирования ресниц и бровей ">
+        <input type="hidden" name="amount" value="50.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="return" value="https://t.me/+jftYTAreCq5kZDk0">
+
+        <input type="submit" value="Оплатить через PayPal">
+    </form>
+</body>
+</html>
